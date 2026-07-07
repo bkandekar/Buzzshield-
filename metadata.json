@@ -1,0 +1,6 @@
+{
+  "name": "BuzzShield",
+  "description": "Smart D2C mosquito zapper lamp designed for Indian households. Protects against dengue, malaria, and chikungunya using eco-friendly UV photon technology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

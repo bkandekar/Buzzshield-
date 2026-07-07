@@ -1,0 +1,74 @@
+[
+  {
+    "id": "classic",
+    "name": "BuzzShield Classic v2",
+    "subtitle": "Eco-Friendly UV Photon Technology",
+    "price": 999,
+    "originalPrice": 1999,
+    "tag": "BEST SELLER",
+    "description": "Engineered specifically for Indian homes, the BuzzShield Classic Zapper v2 uses safe, eco-friendly 365nm UV waves to attract mosquitoes and quietly zap them. Perfect for bedrooms, living rooms, and study tables. Family-safe, chemical-free protection.",
+    "features": [
+      "Safe for kids & pets (Shielded physical barrier)",
+      "Chemical-free & odorless (No toxic sprays)",
+      "Ultra-low power consumption (5W energy saving)",
+      "Whisper-quiet operation (<20dB silent grid)"
+    ],
+    "specs": {
+      "Coverage Area": "Up to 400 sq. ft.",
+      "UV Wavelength": "365 nm Phototactic Light",
+      "Power Input": "5V USB (Cable included)",
+      "Grid Voltage": "1200V Safe Shock Grid",
+      "Weight": "420g Portable Design",
+      "Material": "ABS Fireproof Protective Shell"
+    },
+    "image": "classic-zapper"
+  },
+  {
+    "id": "pro",
+    "name": "BuzzShield Pro Heavy-Duty",
+    "subtitle": "Dual UV Tube & Active Cyclone Suction",
+    "price": 1799,
+    "originalPrice": 3499,
+    "tag": "MAX COVERAGE",
+    "description": "The heavy-duty defense system for larger living areas, balconies, patios, and independent houses. Features twin high-intensity UV lamps paired with a powerful, whisper-quiet suction fan that pulls mosquitoes into an escape-proof tray while the dual 2000V grid handles the rest.",
+    "features": [
+      "High-power dual-grid (2000V instant zapping)",
+      "Active cyclone suction fan technology",
+      "Detachable escape-proof collection tray",
+      "Rugged rainproof housing for semi-outdoor use"
+    ],
+    "specs": {
+      "Coverage Area": "Up to 1000 sq. ft. (Large Halls)",
+      "UV Wavelength": "365 nm - 395 nm Dual Band",
+      "Power Input": "Direct AC 220-240V plug",
+      "Grid Voltage": "2000V High Power Grid",
+      "Weight": "1.2 kg Sturdy Base",
+      "Material": "Industrial Grade Polycarbonate"
+    },
+    "image": "pro-zapper"
+  },
+  {
+    "id": "mini",
+    "name": "BuzzShield Mini USB Go",
+    "subtitle": "Compact Travel & Outdoor Companion",
+    "price": 499,
+    "originalPrice": 999,
+    "tag": "PORTABLE",
+    "description": "Your personal shield against mosquitoes during monsoons, whether you are camping, traveling, studying, or relaxing on the patio. Powered by any standard USB power bank, laptop, or phone charger. Compact, lightweight, and incredibly effective.",
+    "features": [
+      "USB plug & play (Power bank compatible)",
+      "Highly portable & ultra-lightweight",
+      "Convenient integrated silicon hanging loop",
+      "Safe 1000V low-amperage grid"
+    ],
+    "specs": {
+      "Coverage Area": "Up to 150 sq. ft. (Personal Space)",
+      "UV Wavelength": "368 nm Personal Aura",
+      "Power Input": "5V Micro-USB Port",
+      "Power Rating": "2.5W Eco-efficiency",
+      "Dimensions": "12cm x 8.5cm x 8.5cm",
+      "Weight": "180g Ultra-light"
+    },
+    "image": "mini-zapper"
+  }
+]
