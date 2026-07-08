@@ -150,17 +150,28 @@
               return;
             }
             
-            // Render full detailed paragraphs
+            // Render full detailed paragraphs with proper Markdown parsing (headings, bold text, lists, and dividers)
             const paragraphsHTML = post.content.split('\n\n').map(p => {
-              if (p.startsWith('### ')) {
-                return `<h3 style="font-size:22px; color:var(--color-lime); margin: 32px 0 16px 0; font-weight:700;">${p.replace('### ', '')}</h3>`;
+              // Convert markdown bold (**text**) to HTML bold (<strong>text</strong>)
+              let parsed = p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+              
+              if (parsed.startsWith('### ')) {
+                return `<h3 style="font-size:22px; color:var(--color-lime); margin: 32px 0 16px 0; font-weight:700;">${parsed.replace('### ', '')}</h3>`;
               }
-              if (p.startsWith('- **') || p.match(/^[0-9]+\.\s\*\*/)) {
-                // List parsing
-                const items = p.split('\n').map(item => `<li style="margin-bottom:12px; font-size:15px; color:#E1FDF5;">${item.replace(/^[0-9]+\.\s\*\*/, '<strong>').replace(/^\-\s\*\*/, '<strong>').replace(/\*\*/, '</strong>')}</li>`).join('');
-                return `<ul style="padding-left:24px; margin-bottom:24px;">${items}</ul>`;
+              
+              if (parsed.trim() === '---') {
+                return `<hr style="border: 0; border-top: 1px solid rgba(164, 255, 63, 0.15); margin: 32px 0;">`;
               }
-              return `<p style="font-size:16px; opacity:0.9; margin-bottom:24px; line-height:1.8; color:#E1FDF5;">${p}</p>`;
+              
+              if (parsed.startsWith('- ') || parsed.match(/^[0-9]+\.\s/)) {
+                const items = parsed.split('\n').map(item => {
+                  let cleanedItem = item.replace(/^\-\s/, '').replace(/^[0-9]+\.\s/, '');
+                  return `<li style="margin-bottom:12px; font-size:15px; color:#E1FDF5; line-height:1.7;">${cleanedItem}</li>`;
+                }).join('');
+                return `<ul style="padding-left:24px; margin-bottom:24px; list-style-type: ${parsed.startsWith('- ') ? 'disc' : 'decimal'};">${items}</ul>`;
+              }
+              
+              return `<p style="font-size:16px; opacity:0.9; margin-bottom:24px; line-height:1.8; color:#E1FDF5;">${parsed}</p>`;
             }).join('');
 
             container.innerHTML = `
